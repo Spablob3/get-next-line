@@ -6,57 +6,55 @@
 /*   By: joapedro <joapedro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 09:31:43 by joapedro          #+#    #+#             */
-/*   Updated: 2025/05/09 15:15:00 by joapedro         ###   ########.fr       */
+/*   Updated: 2025/05/14 15:17:26 by joapedro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *get_next_line(int fd)
+static char *read_file(int fd)
 {
-	int		read_char;
-	char	*buffer;
-	static char	*stash;
+	int		bytes_read;
+	static char	read_buffer[BUFFER_SIZE + 1];
 	char	*line;
 
-	read_char = 1;
-	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
-	if (!buffer)
-		return (NULL);
-	*buffer = 0;
-	while (!ft_strchr(buffer, '\n') && read_char != 0 )
+	line = NULL;
+	bytes_read = 1;
+	while (!ft_strchr(read_buffer, '\n') && bytes_read != 0)
 	{
-		read_char = read(fd, buffer, BUFFER_SIZE);
-		if (read_char == -1)
+		bytes_read = read(fd, read_buffer, BUFFER_SIZE);
+		if (bytes_read == -1)
 		{
-			free(buffer);
 			return (NULL);
 		}
-		if (read_char == 0)
+		if (bytes_read == 0)
 		{
-			free(buffer);
 			break;
 		}
-		buffer[read_char] = '\0';
-		stash = ft_strjoin(stash, buffer);
+		read_buffer[bytes_read] = '\0';
+		line = ft_strjoin(line, read_buffer);
 	}
-	line = ft_strndup(stash, '\n');
-	stash = ft_substr(stash, ft_strlen(line), ft_strlen(stash) - ft_strlen(line));
-	return (stash);
-	
+	return (line);
 }
+
+char *get_next_line(int fd)
+{
+	char	*stash;
+
+
+	stash = read_file(fd);
+	return (stash);
+}
+
 int	main(void)
 {
-	int fd;
 	char	*line;
+	int		fd;
 
 	fd = open("test.txt", O_RDONLY);
-	line = get_next_line(fd);
 
-	while (line != NULL)
-	{
-		printf("%s", line);
-		line = get_next_line(fd);
-	}
+	line = get_next_line(fd);
+	printf("%s", line);
 	close(fd);
+	return (0);
 }
