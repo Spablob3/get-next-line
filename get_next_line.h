@@ -6,7 +6,7 @@
 /*   By: joapedro <joapedro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 10:51:38 by joapedro          #+#    #+#             */
-/*   Updated: 2025/05/14 15:07:57 by joapedro         ###   ########.fr       */
+/*   Updated: 2025/05/15 11:11:51 by joapedro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void *ft_calloc(size_t nmemb, size_t size);
 size_t	ft_strlen(char *s);
 char	*ft_strchr(char *s, int c);
 char	*ft_strjoin(char *s1, char *s2);
+void	shift(char *read_buffer);
 
 #endif
 
