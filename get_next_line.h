@@ -13,7 +13,7 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 # ifndef BUFFER_SIZE 
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 3
 # endif
 
 # include <stdio.h>
@@ -23,8 +23,6 @@
 # include <string.h>
 
 char	*get_next_line(int fd);
-void	ft_bzero(void *s, size_t n);
-void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_strlen(char *s);
 int		ft_strchr(char *s, int c);
 char	*ft_strjoin(char *s1, char *s2);
