@@ -6,16 +6,15 @@
 /*   By: joapedro <joapedro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 10:51:38 by joapedro          #+#    #+#             */
-/*   Updated: 2025/05/15 11:11:51 by joapedro         ###   ########.fr       */
+/*   Updated: 2025/05/19 14:19:28 by joapedro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef	LIBFT_H
-# define LIBFT_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 # ifndef BUFFER_SIZE 
-#  define BUFFER_SIZE 3
-# endif 
+#  define BUFFER_SIZE 42
+# endif
 
 # include <stdio.h>
 # include <fcntl.h>
@@ -24,12 +23,11 @@
 # include <string.h>
 
 char	*get_next_line(int fd);
-void ft_bzero(void *s, size_t n);
-void *ft_calloc(size_t nmemb, size_t size);
-size_t	ft_strlen(char *s);
-char	*ft_strchr(char *s, int c);
+void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
+int		ft_strlen(char *s);
+int		ft_strchr(char *s, int c);
 char	*ft_strjoin(char *s1, char *s2);
 void	shift(char *read_buffer);
 
 #endif
-
