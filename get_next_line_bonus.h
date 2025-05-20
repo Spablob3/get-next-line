@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joapedro <joapedro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/05 10:51:38 by joapedro          #+#    #+#             */
-/*   Updated: 2025/05/20 09:33:11 by joapedro         ###   ########.fr       */
+/*   Created: 2025/05/20 09:27:12 by joapedro          #+#    #+#             */
+/*   Updated: 2025/05/20 10:25:02 by joapedro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 # ifndef BUFFER_SIZE 
 #  define BUFFER_SIZE 42
 # endif
