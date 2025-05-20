@@ -6,7 +6,7 @@
 /*   By: joapedro <joapedro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 09:59:34 by joapedro          #+#    #+#             */
-/*   Updated: 2025/05/19 14:18:11 by joapedro         ###   ########.fr       */
+/*   Updated: 2025/05/20 11:30:43 by joapedro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_strlen(char *s)
 	return (i);
 }
 
-int	ft_strchr(char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
 	int		len;
 	int		i;
@@ -37,9 +37,11 @@ int	ft_strchr(char *s, int c)
 	while (i <= len)
 	{
 		if (s[i] == c)
-			return (1);
+			return ((char *)s);
 		i++;
 	}
+	if (c == '\0')
+		return ((char *)s);
 	return (0);
 }
 

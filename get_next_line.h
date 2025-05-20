@@ -6,14 +6,14 @@
 /*   By: joapedro <joapedro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 10:51:38 by joapedro          #+#    #+#             */
-/*   Updated: 2025/05/20 09:33:11 by joapedro         ###   ########.fr       */
+/*   Updated: 2025/05/20 11:30:54 by joapedro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 # ifndef BUFFER_SIZE 
-#  define BUFFER_SIZE 3
+#  define BUFFER_SIZE 42
 # endif
 
 # include <unistd.h>
@@ -21,7 +21,7 @@
 
 char	*get_next_line(int fd);
 int		ft_strlen(char *s);
-int		ft_strchr(char *s, int c);
+char	*ft_strchr(char *s, int c);
 char	*ft_strjoin(char *s1, char *s2);
 void	shift(char *read_buffer);
 

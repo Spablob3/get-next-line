@@ -6,7 +6,7 @@
 /*   By: joapedro <joapedro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 09:27:12 by joapedro          #+#    #+#             */
-/*   Updated: 2025/05/20 10:25:02 by joapedro         ###   ########.fr       */
+/*   Updated: 2025/05/20 11:32:44 by joapedro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 char	*get_next_line(int fd);
 int		ft_strlen(char *s);
-int		ft_strchr(char *s, int c);
+char	*ft_strchr(char *s, int c);
 char	*ft_strjoin(char *s1, char *s2);
 void	shift(char *read_buffer);
 

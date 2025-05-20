@@ -6,7 +6,7 @@
 /*   By: joapedro <joapedro@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 09:31:43 by joapedro          #+#    #+#             */
-/*   Updated: 2025/05/20 11:05:48 by joapedro         ###   ########.fr       */
+/*   Updated: 2025/05/20 11:37:32 by joapedro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*get_next_line(int fd)
 	shift(read_buffer);
 	return (line);
 }
-/*
+/* 
 #include <stdio.h>
 #include <fcntl.h>
 int	main(void)
@@ -55,5 +55,4 @@ int	main(void)
 	}
 	close(fd);
 	return (0);
-}
-*/
+} */
