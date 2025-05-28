@@ -38,7 +38,7 @@ char	*get_next_line(int fd)
 	shift(read_buffer);
 	return (line);
 }
-/* 
+ 
 #include <stdio.h>
 #include <fcntl.h>
 int	main(void)
@@ -55,4 +55,4 @@ int	main(void)
 	}
 	close(fd);
 	return (0);
-} */
+} 
